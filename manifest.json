@@ -1,0 +1,18 @@
+{
+  "description": "Restores the hide/unhide chat button on the command center.",
+  "manifest_version": 3,
+  "name": "Fix Twitch Chat",
+  "version": "1.0",
+  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/borderify",
+  "icons": {
+    "48": "icons/chat-48.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.twitch.tv/*/commandcenter"],
+      "js": ["main.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
